@@ -4,27 +4,37 @@
 ?>
 	<form action="" method="POST">
 		<fieldset>
-			<legend>Setting Database Postgres</legend>
+			<legend>Setting Database</legend>
 			<table>
+				<tr>
+					<td>CONNECTION</td>
+					<td>:</td>
+					<td>
+						<select name="DB_CONNECTION">
+							<option value="mysql">Mysql</option>
+							<option value="postgres">Postgres</option>
+						</select>
+					</td>
+				</tr>
 				<tr>
 					<td>HOST</td>
 					<td>:</td>
 					<td>
-						<input type="text" name="DB_HOST" value="<?php echo $_SESSION['DB_HOST']; ?>">
+						<input type="text" name="DB_HOST" value="<?php echo $_SESSION['DB_HOST']; ?>" required>
 					</td>
 				</tr>
 				<tr>
 					<td>PORT</td>
 					<td>:</td>
 					<td>
-						<input type="text" name="DB_PORT" value="<?php echo $_SESSION['DB_PORT']; ?>">
+						<input type="text" name="DB_PORT" value="<?php echo $_SESSION['DB_PORT']; ?>" required>
 					</td>
 				</tr>
 				<tr>
 					<td>USERNAME</td>
 					<td>:</td>
 					<td>
-						<input type="text" name="DB_USERNAME" value="<?php echo $_SESSION['DB_USERNAME']; ?>">
+						<input type="text" name="DB_USERNAME" value="<?php echo $_SESSION['DB_USERNAME']; ?>" required>
 					</td>
 				</tr>
 				<tr>
@@ -35,7 +45,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td>NAMA DATABASE</td>
+					<td>DATABASE NAME</td>
 					<td>:</td>
 					<td>
 						<input type="text" name="DB_DATABASE" value="<?php echo $_SESSION['DB_DATABASE']; ?>">
@@ -58,7 +68,7 @@
 								style="cursor: pointer;  background-color: #4CAF50; color: #fff; padding: 7px; font-weight: bold;"
 							<?php endif; ?>
 						>
-							Lanjut ->
+							NEXT ->
 						</button>
 						<br>
 						<p style="font-size: 11px;">
@@ -148,7 +158,7 @@
 								style="cursor: pointer;  background-color: #4CAF50; color: #fff; padding: 7px; font-weight: bold;"
 							<?php endif; ?>
 						>
-							Lanjut ->
+							NEXT ->
 						</button>
 						<br>
 						<p style="font-size: 11px;">
