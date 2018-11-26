@@ -2,8 +2,8 @@
 session_start();
 error_reporting(1);
 
-require_once __DIR__.'/variables.php';
-require_once __DIR__.'/handle.php';
+require_once __DIR__.'/src/variables.php';
+require_once __DIR__.'/src/handle.php';
 
 
 ?>
@@ -51,9 +51,9 @@ require_once __DIR__.'/handle.php';
 				</p>
 				<?php endif; ?>
 			</div>
-			<?php require __DIR__.'/step.php'; ?>
+			<?php require __DIR__.'/src/step.php'; ?>
 		</div>
-		<?php require __DIR__.'/req.php'; ?>
+		<?php require __DIR__.'/src/req.php'; ?>
 		<p>
 			<form action="" method="POST">
 				<input type="hidden" name="retry" value="retry">

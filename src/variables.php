@@ -1,7 +1,7 @@
 <?php 
 
 define('VERSION', '1.0');
- define('SOURCE_FILE', ''.__DIR__.'/source.zip');
+define('SOURCE_FILE', ''.__DIR__.'/../source.zip');
 
 $current_phpextensions = get_loaded_extensions();
 $next_step = null;
@@ -21,7 +21,7 @@ $is_xml = false;
 
 //Checking source file
 if(!file_exists(SOURCE_FILE)) {
-	die('Source File Installer tidak ada..');
+
 } else {
 	//Check writeable source file
 	if(is_writable(SOURCE_FILE)) {
@@ -50,7 +50,7 @@ if (in_array('xml', $current_phpextensions) == 1) {
 }
 
 //Disabeld Next Button If Server Requirements Not Support
-if(!$is_open_ssl OR !$is_pdo OR !$is_mbstring OR !$is_tokenizer OR !$is_xml) {
+if(!$is_open_ssl OR !$is_pdo OR !$is_mbstring OR !$is_tokenizer OR !$is_xml OR !$is_source_file_writeable) {
 	$is_next_step = false;
 }
 
